@@ -47,10 +47,8 @@ jobs:
           git checkout main
           git branch --set-upstream-to=origin/main
           git pull
-          pip show pytest  
-          pip freeze | grep pytest
           pytest --version
-          pytest >> log_pytest.txt
+          pytest >> log_pytest.txt &2>1
           ls -a
           git add .
           git commit -m "random file from action"
