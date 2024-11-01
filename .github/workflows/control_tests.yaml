@@ -43,6 +43,9 @@ jobs:
           git checkout main
           git branch --set-upstream-to=origin/main
           git pull
+          pip show pytest  
+          pip freeze | grep pytest
+          pytest --version
           pytest >> log_pytest.txt
           ls -a
           git add .
