@@ -21,5 +21,3 @@ def test_coucou():
     output = 'hello'
     assert output == 'hello'
 
-test_coucou()
-
